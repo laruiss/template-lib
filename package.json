@@ -1,0 +1,31 @@
+{
+  "name": "@laruiss/so-lib",
+  "version": "1.0.0",
+  "description": "Gabarit pour créer une bibliothèque JS publiée sur NPM",
+  "main": "dist/so-lib.js",
+  "exports": {
+    ".": {
+      "import": "./dist/so-lib.mjs",
+      "require": "./dist/so-lib.umd.js"
+    },
+    "./styles": {
+      "import": "./dist/so-lib.css",
+      "require": "./dist/so-lib.css"
+    }
+  },
+  "scripts": {
+    "clean-dist": "rimraf dist lib",
+    "prebuild": "run-s clean-dist",
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  }
+}

@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Gabarit pour créer une bibliothèque JS publiée sur NPM",
   "main": "dist/so-lib.js",
+  "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/so-lib.mjs",
+      "import": "./dist/so-lib.js",
       "require": "./dist/so-lib.umd.js"
     },
     "./styles": {
@@ -24,8 +25,11 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.8.9",
+    "browserslist": "^4.22.1",
+    "lightningcss": "^1.22.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.2.2",
+    "unocss": "^0.57.1",
     "vite": "^4.5.0"
   }
 }
